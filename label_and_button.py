@@ -21,5 +21,5 @@ l=tk.Label(window,textvariable=var, bg='green', font=('Arial',12), width=15, hei
 l.pack()
 #create a button
 b=tk.Button(window,text='hit me', width=15, height=2, command=hit_me)
-
+b.pack()
 window.mainloop()
