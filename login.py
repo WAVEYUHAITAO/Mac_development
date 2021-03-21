@@ -77,10 +77,11 @@ def usr_sign_up():
         else:
             if usr_pwd.get()==''or confirm_pwd.get()=='':
                 tk.messagebox.showwarning(title='Sign up',message='pls input password and double confirm')
-            elif usr_pwd.get()!=confirm_pwd.get():
-                tk.messagebox.showerror(title='Sign up',message='两次输入的密码不一致，请重新输入')
-            else:
-                tk.messagebox.showinfo(message='congratulation')
+            else: 
+                if usr_pwd.get()!=confirm_pwd.get():
+                    tk.messagebox.showerror(title='Sign up',message='两次输入的密码不一致，请重新输入')
+                else:
+                    tk.messagebox.showinfo(message='congratulation')
 
 
     tk.Button(window_sign_up,text='ok',width=7,command=sign_up_check).place(x=70,y=145)
