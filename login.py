@@ -52,6 +52,8 @@ def usr_sign_up():
     usr_pwd = tk.StringVar()
     confirm_pwd = tk.StringVar()
     window_sign_up = tk.Toplevel(window)
+    window_sign_up.attributes('-topmost', 1)
+    window_sign_up.attributes('-toolwindow', 1)
     window_sign_up.title('Sign Up')
     window_sign_up.geometry('300x200')
     tk.Label(window_sign_up, text='user name:').place(x=30, y=30)
