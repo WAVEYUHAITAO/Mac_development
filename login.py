@@ -86,6 +86,7 @@ def usr_sign_up():
                 if usr_pwd.get() != confirm_pwd.get():
                     tk.messagebox.showerror(title='Sign up', message='两次输入的密码不一致，请重新输入')
                 else:
+
                     usr_file = open('usrs_info.pickle', 'wb')
                     usrs_info[usr_name.get()] = usr_pwd.get()  # 将用户注册的账号密码保存入usrs_info
                     pickle.dump(usrs_info, usr_file)  # 把用户输入保存入pickle file
