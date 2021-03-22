@@ -101,4 +101,5 @@ btn_login = tk.Button(window, text='Login', command=usr_login)
 btn_login.place(x=170, y=260)
 btn_sign_up = tk.Button(window, text='Sign up', command=usr_sign_up)
 btn_sign_up.place(x=220, y=260)
+
 window.mainloop()
