@@ -30,7 +30,7 @@ def usr_login():
     try:
         with open('usrs_info.pickle', 'rb') as usr_file:
             usrs_info = pickle.load(usr_file)
-    except EOFError:
+    except EOFError:  # 防止pickle文件为空时候会报错 EOFError: Ran out of input
         return None
     except FileNotFoundError:
         with open('usrs_info.pickle', 'wb') as usr_file:
@@ -72,7 +72,7 @@ def usr_sign_up():
         try:
             with open('usrs_info.pickle', 'rb') as usr_file:
                 usrs_info = pickle.load(usr_file)
-        except EOFError:
+        except EOFError:   # 防止pickle文件为空时候会报错 EOFError: Ran out of input
             return None
         except FileNotFoundError:
             with open('usrs_info.pickle', 'wb') as usr_file:
