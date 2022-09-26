@@ -7,9 +7,8 @@ window.title('辅助')
 window.geometry('450x300')
 
 canvas = tk.Canvas(window, height=200, width=500)
-image_file = tk.PhotoImage(file='welcome.gif')
+image_file = tk.PhotoImage(file='E:\Repositories\Mac-development\welcome.gif')
 image = canvas.create_image(30, 20, anchor='nw', image=image_file)
-canvas.pack(side='top')
 
 tk.Label(window, text='user name:').place(x=60, y=210)
 tk.Label(window, text='password:').place(x=60, y=230)
